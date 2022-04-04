@@ -1,0 +1,16 @@
+#!/bin/bash
+#$ -N mouse
+#$ -l h_rt=72:00:00
+#$ -b y
+#$ -V
+#$ -cwd
+#$ -t 1-1
+#$ -q cpu.q
+
+# -j y
+source /home/ywang21/.bashrc_conda_YW
+conda activate /home/ywang21/software/scgen_tf1x_conda/
+
+cd /home/ywang21/scgen-mouse/code 
+
+time python /home/ywang21/scgen-mouse/code/train_scGen_mouse.py 
